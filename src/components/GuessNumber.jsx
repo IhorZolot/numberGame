@@ -21,6 +21,10 @@ const GuessNumber = () => {
   };
 
   const handleSubmit = async () => {
+    if (guess.trim() === '') { 
+      setResult('Будь ласка, введіть число.');
+      return;
+    }
     try {
       const response = await API.post('/guess', { guess });
       setResult(response.data.message.trim());
@@ -29,7 +33,6 @@ const GuessNumber = () => {
       }
     } catch (error) {
       console.error('Error:', error);
-      setResult('Введіть число від 1 до 9');
     }
     setGuess('')
   };
