@@ -10,9 +10,9 @@ const GuessNumber = () => {
 
   const handleStartGame = async () => {
     try {
-      await API.post('/start_game');
+      const response = await API.post('/start_game');
       setGameStarted(true);
-      setResult('');
+      setResult(response.data.message);;
       setGuess('');
     } catch (error) {
       console.error('Error starting game:', error);
@@ -23,20 +23,20 @@ const GuessNumber = () => {
   const handleSubmit = async () => {
     try {
       const response = await API.post('/guess', { guess });
-      setResult(response.data.message);
-      if (response.data.message === 'Число вгадано') {
+      setResult(response.data.message.trim());
+      if (response.data.message.trim() === 'Число вгадано') {
         setGameStarted(false);
       }
     } catch (error) {
       console.error('Error:', error);
-      setResult('Сталася помилка при обробці запиту.');
+      setResult('Введіть число від 1 до 9');
     }
     setGuess('')
   };
 
   return (
     <div>
-      <h1>Вгадай число</h1>
+      <h2>Вгадай число</h2>
       {gameStarted ? (
         <GuessInput
         guess={guess}
@@ -44,7 +44,7 @@ const GuessNumber = () => {
         handleSubmit={handleSubmit}
       />
       ) : (
-        <button onClick={handleStartGame}>Почати нову гру</button>
+        <button onClick={handleStartGame}>Почати гру</button>
       )}
       <ResultDisplay result={result} />
     </div>
