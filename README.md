@@ -1,8 +1,39 @@
-# React + Vite
+# Гра "Вгадай число"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Опис
+Це гра для вгадування числа, яка реалізована з використанням React.js для front-end і Node.js з Express для back-end.
 
-Currently, two official plugins are available:
+### Встановлення
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Клонуйте репозиторій:
+    ```
+    git clone <URL репозиторію>
+    ```
+   
+2. Перейдіть у папку `backend` і встановіть залежності:
+    ```
+    cd backend
+    npm install
+    ```
+   
+3. Запустіть сервер:
+    ```
+    node index.js
+    ```
+   
+4. Перейдіть у папку `frontend` і встановіть залежності:
+    ```
+    cd frontend
+    npm install
+    ```
+   
+5. Запустіть React додаток:
+    ```
+    npm start
+    ```
+
+### Використання
+
+- Відкрийте браузер і перейдіть на `http://localhost:3000`.
+- Натисніть "Почати гру" для початку нової гри.
+- Введіть число та натисніть "Спробувати", щоб зробити спробу.

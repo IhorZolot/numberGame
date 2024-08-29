@@ -1,0 +1,32 @@
+/* GuessInput.css */
+.guess-input {
+  margin-top: 20px;
+  display: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.guess-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.guess-input button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.guess-input button:hover {
+  background-color: #0056b3;
+}

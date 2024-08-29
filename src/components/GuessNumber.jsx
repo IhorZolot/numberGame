@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { API } from '../config/gameConfig';
+import ResultDisplay from './ResultDisplay';
+import GuessInput from './GuessInput';
 
 const GuessNumber = () => {
   const [guess, setGuess] = useState('');
@@ -36,18 +38,15 @@ const GuessNumber = () => {
     <div>
       <h1>Вгадай число</h1>
       {gameStarted ? (
-        <>
-          <input
-            type="number"
-            value={guess}
-            onChange={(e) => setGuess(e.target.value)}
-          />
-          <button onClick={handleSubmit}>Відправити</button>
-        </>
+        <GuessInput
+        guess={guess}
+        setGuess={setGuess}
+        handleSubmit={handleSubmit}
+      />
       ) : (
         <button onClick={handleStartGame}>Почати нову гру</button>
       )}
-      <div>{result}</div>
+      <ResultDisplay result={result} />
     </div>
   );
 };
