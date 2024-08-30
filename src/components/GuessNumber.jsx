@@ -36,8 +36,12 @@ const GuessNumber = () => {
         setGameFinished(true);
       }
     } catch (error) {
-      console.error('Error:', error);
-      setResult('Сталася помилка при обробці запиту.');
+      if (error.response) {
+        setResult(error.response.data.message);
+      } else {
+        console.error('Error:', error);
+        setResult('Сталася помилка при обробці запиту.');
+      }
     }
     setGuess('')
   };
