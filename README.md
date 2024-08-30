@@ -29,25 +29,33 @@
    ```bash
    git clone https://github.com/your-repository/backEndNumberGame
    cd backEndNumberGame
+   ```
+
 2. Встановіть залежності:
   ```bash
    npm install
+   ```
 3. Запуск бекенд проекту 
   ```bash
    npm run dev
+   ```
+
 
 ### 2. Запуск фронтенду
 1. Встановлення:
    ```bash
    git clone https://github.com/your-repository/numberGame
    cd numberGame
+   ```
 2. Встановіть залежності:
   ```bash
    npm install
+  ```
 3. Запуск бекенд проекту 
   ```bash
    npm run dev
-   ___
+  ```
+---
 ## Інструкції для деплою
 
 **Деплой бекенду**
@@ -58,11 +66,13 @@
 Налаштуйте платформу для деплою фронтенду (наприклад, Netlify, Vercel).
 Склонуйте репозиторій або підключіть його до платформи.
 Налаштуйте середовище та запустіть фронтенд відповідно до інструкцій платформи.
-
+---
 ## Запуск бота
 
-1. Реєстрація бота в Telegram
+1. Запуск бота в Telegram
 Відкрийте Telegram та знайдіть бот [@MyGuessingBot](https://t.me/MyGuessingBot) та запустіть гру.
+Примітка: Гра може не відразу запуститись, у зв'язку з тим що бекенд на Vercel має властивість засипати. 
+Тому іноді потрібний час для запуску.
 
 
 [Ihor Zolotoverkh](www.linkedin.com/in/ihor-zolotoverkh)
