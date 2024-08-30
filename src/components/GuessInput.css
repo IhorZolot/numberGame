@@ -16,6 +16,7 @@
   border: 2px solid transparent;
   border-radius: 10px;
   background: white;
+  font-weight: bold;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s, box-shadow 0.3s;
   outline: none;
@@ -55,3 +56,10 @@
   transform: scale(0.98);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+@media (prefers-color-scheme: dark) {
+  .guess-input input {
+    background-color: #333; 
+    color: white; 
+    border-color: #444; 
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  }}
